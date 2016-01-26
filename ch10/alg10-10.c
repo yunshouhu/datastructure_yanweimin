@@ -10,7 +10,7 @@ void Merge(RedType SR[], RedType TR[], int i, int m, int n)
 { /* 将有序的SR[i..m]和SR[m+1..n]归并为有序的TR[i..n] 算法10.12 */
 	int j, k, l;
 	for (j = m + 1, k = i; i <= m&&j <= n; ++k) /* 将SR中记录由小到大地并入TR */
-		if LQ(SR[i].key, SR[j].key)
+		if (SR[i].key<= SR[j].key)
 			TR[k] = SR[i++];
 		else
 			TR[k] = SR[j++];
